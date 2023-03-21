@@ -39,7 +39,7 @@ const AllocationForm = () =>{
                     <div className="input-group-prepend">
                     <label className="input-group-text" htmlFor="inputGroupSelect01">Department</label>
                     </div>
-                    <select className="custom-select" id="inputGroupSelect01" onChange={(event) => setName(event.target.value)}>
+                    <select className="custom-select form-control"  id="inputGroupSelect01" onChange={(event) => setName(event.target.value)}>
                     <option defaultValue>Choose...</option>
                     <option value="Marketing" name="marketing"> Marketing</option>
                     <option value="Sales" name="sales">Sales</option>
@@ -51,12 +51,12 @@ const AllocationForm = () =>{
                     <div className="input-group-prepend" style={{ marginLeft: '2rem' }}>
                     <label className="input-group-text" htmlFor="inputGroupSelect02">Allocation</label>
                     </div>
-                    <select className="custom-select" id="inputGroupSelect02" onChange={(event) => setAction(event.target.value)}>
+                    <select className="custom-select form-control" id="inputGroupSelect02" onChange={(event) => setAction(event.target.value)}>
                     <option defaultValue value="Add" name="Add">Add</option>
                     <option value="Reduce" name="Reduce">Reduce</option>
                     </select>
                     <label htmlFor="cost" style={{marginLeft:'2rem'}}>{currency}</label>
-                    <input type="number" required='required' id="cost" value={cost} style={{marginLeft:'1rem',size:10}} onChange={(e)=>setCost(e.target.value)} />
+                    <input type="number" className='form-control' required='required' id="cost" value={cost} style={{marginLeft:'1rem',size:10}} onChange={(e)=>setCost(e.target.value)} />
                     <button className="btn btn-primary" onClick={submitEvent} style={{ marginLeft: '2rem' }}>Save</button>
                 </div>
             </div>

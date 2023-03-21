@@ -19,6 +19,7 @@ const Budget = () => {
       <span>
         Budget : {currency}{" "}
         <input
+        className='form-control'
           type="number"
           step={10}
           value={budget}

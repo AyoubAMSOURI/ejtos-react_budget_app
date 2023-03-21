@@ -6,6 +6,7 @@ export const AppReducer = (state, action) => {
     let budget = 0;
     switch (action.type) {
         case 'ADD_EXPENSE':
+           
             let total_budget = 0;
             total_budget = state.expenses.reduce(
                 (previousExp, currentExp) => {
@@ -15,6 +16,7 @@ export const AppReducer = (state, action) => {
             total_budget = total_budget + action.payload.cost;
             action.type = "DONE";
             if(total_budget <= state.budget) {
+                
                 total_budget = 0;
                 state.expenses.map((currentExp)=> {
                     if(currentExp.name === action.payload.name) {
