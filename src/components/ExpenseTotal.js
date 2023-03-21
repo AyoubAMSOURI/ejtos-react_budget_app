@@ -2,11 +2,11 @@ import { useContext } from "react";
 import { AppContext } from "../context/AppContext";
 
 const ExpenseTotal = () =>{
-    const {budget,remaining} = useContext(AppContext);
+    const {currency,budget,remaining} = useContext(AppContext);
 
     return(
         <div className="alert alert-primary">
-            <span>Spent so far: {budget-remaining} £</span>
+            <span>Spent so far: {currency+' '+ (budget-remaining)} </span>
         </div>
     )
 
